@@ -1,0 +1,6 @@
+const SYSTEM_POPUP = {
+  GENERAL: 'GENERAL',
+  PLACE_BID: 'PLACE_BID'
+};
+
+export default SYSTEM_POPUP;
