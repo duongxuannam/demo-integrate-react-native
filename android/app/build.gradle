@@ -62,6 +62,7 @@ dependencies {
     implementation project(':react-native-maps')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-image-picker')
+    implementation project(':@react-native-community_cameraroll')
     // Exactly this version
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'

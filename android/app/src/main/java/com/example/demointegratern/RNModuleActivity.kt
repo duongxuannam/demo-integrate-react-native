@@ -27,6 +27,9 @@ import com.imagepicker.ImagePickerPackage;
 import io.invertase.firebase.database.ReactNativeFirebaseDatabasePackage
 import androidx.fragment.app.FragmentActivity
 import com.horcrux.svg.SvgPackage
+import com.airbnb.android.react.maps.MapsPackage;
+import io.github.elyx0.reactnativedocumentpicker.DocumentPickerPackage; // Import package
+import com.reactnativecommunity.cameraroll.CameraRollPackage
 
 class RNModuleActivity : FragmentActivity(), DefaultHardwareBackBtnHandler {
     private var mReactRootView: ReactRootView? = null
@@ -58,10 +61,12 @@ class RNModuleActivity : FragmentActivity(), DefaultHardwareBackBtnHandler {
                 .addPackage(ReactNativeFirebaseAuthPackage())
                 .addPackage(ReactNativeFirebaseDatabasePackage())
                 .addPackage(SvgPackage())
-
+                .addPackage(MapsPackage())
+                .addPackage(DocumentPickerPackage())
                 .addPackage(AsyncStoragePackage())
                 .addPackage(SafeAreaContextPackage())
                 .addPackage(TestConnectNativePackage())
+                .addPackage(CameraRollPackage())
                 .setUseDeveloperSupport(BuildConfig.DEBUG)
                 .setInitialLifecycleState(LifecycleState.RESUMED)
                 .build()
