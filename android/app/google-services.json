@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "339873965057",
+    "firebase_url": "https://realtimechat-e57eb.firebaseio.com",
+    "project_id": "realtimechat-e57eb",
+    "storage_bucket": "realtimechat-e57eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339873965057:android:dcd1ab8d7830856f4acc00",
+        "android_client_info": {
+          "package_name": "com.example.demointegratern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339873965057-q0e28ebq3as0v7cl2bmo1gl9vgckgrlo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNvaS_XPuIcD3fpKwP3ShDYQ-FPdyU3jI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339873965057-q0e28ebq3as0v7cl2bmo1gl9vgckgrlo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339873965057-vmr4qfpn2oqo3rv3ndhp8n0dl1kv2239.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.demointegratern"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339873965057:android:ce6b58f156a9a3604acc00",
+        "android_client_info": {
+          "package_name": "com.example.demointegratern"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "339873965057-q0e28ebq3as0v7cl2bmo1gl9vgckgrlo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNvaS_XPuIcD3fpKwP3ShDYQ-FPdyU3jI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339873965057-q0e28ebq3as0v7cl2bmo1gl9vgckgrlo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339873965057-vmr4qfpn2oqo3rv3ndhp8n0dl1kv2239.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.demointegratern"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
