@@ -37,7 +37,33 @@ target 'DemoIntegrateRN' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+  pod 'react-native-safe-area-context', :path => '../node_modules/react-native-safe-area-context'
+
+  pod 'RNCMaskedView', :path => '../node_modules/@react-native-community/masked-view'
+
+  # pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+  # pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
+
+  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+
+
   use_native_modules!
+
+
+  # post_install do |installer|
+  #   installer.pods_project.targets.each do |target|
+  #       if target.name == "react-native-google-maps"
+  #           target.build_configurations.each do |config|
+  #               config.build_settings['CLANG_ENABLE_MODULES'] = 'No'
+  #           end
+  #       end
+  #       if target.name == "React"
+  #         target.remove_from_project
+  #       end
+  #   end
+  # end
+  
 
   target 'DemoIntegrateRNTests' do
     inherit! :search_paths

@@ -11,6 +11,10 @@
 		00265C352420866A0047B6D4 /* TestConnectNative.m in Sources */ = {isa = PBXBuildFile; fileRef = 00265C342420866A0047B6D4 /* TestConnectNative.m */; };
 		00265C372420BF820047B6D4 /* TestConnectNative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00265C362420BF820047B6D4 /* TestConnectNative.swift */; };
 		00D083282429E31C00C54A10 /* RNViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D083272429E31C00C54A10 /* RNViewManager.swift */; };
+		0439B7E424AB18FB0039CB09 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0439B7E024AB18FA0039CB09 /* GoogleService-Info.plist */; };
+		0439B7E924AB1A2C0039CB09 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0439B7E624AB1A2B0039CB09 /* Roboto-Regular.ttf */; };
+		0439B7EA24AB1A2C0039CB09 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0439B7E724AB1A2C0039CB09 /* Roboto-Bold.ttf */; };
+		0439B7EB24AB1A2C0039CB09 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0439B7E824AB1A2C0039CB09 /* Roboto-Medium.ttf */; };
 		1972010711CDC81D5272B59E /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43DD97534A5D8A95F1F68C3A /* Pods_DemoIntegrateRN_DemoIntegrateRNUITests.framework */; };
 		1E70B3406C6B4A469DACD4F5 /* iCielVAGRoundedNext-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B1604CEEB89642EE8FD94279 /* iCielVAGRoundedNext-Regular.otf */; };
 		3EF5B4D14A365C60EF4788F3 /* Pods_DemoIntegrateRNTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDED0FD11842B1ACB90B8ECB /* Pods_DemoIntegrateRNTests.framework */; };
@@ -53,6 +57,10 @@
 		00265C342420866A0047B6D4 /* TestConnectNative.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestConnectNative.m; sourceTree = "<group>"; };
 		00265C362420BF820047B6D4 /* TestConnectNative.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConnectNative.swift; sourceTree = "<group>"; };
 		00D083272429E31C00C54A10 /* RNViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNViewManager.swift; sourceTree = "<group>"; };
+		0439B7E024AB18FA0039CB09 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0439B7E624AB1A2B0039CB09 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		0439B7E724AB1A2C0039CB09 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		0439B7E824AB1A2C0039CB09 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		130A0DCDC72A2F2A9C7B28C0 /* Pods-DemoIntegrateRN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoIntegrateRN.debug.xcconfig"; path = "Target Support Files/Pods-DemoIntegrateRN/Pods-DemoIntegrateRN.debug.xcconfig"; sourceTree = "<group>"; };
 		18ACE12614744C21903E9BBA /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
 		1FBA3C2B77E14DB4AC1749D2 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -177,6 +185,7 @@
 		402789472419F02900DDDD5B /* DemoIntegrateRN */ = {
 			isa = PBXGroup;
 			children = (
+				0439B7E024AB18FA0039CB09 /* GoogleService-Info.plist */,
 				4027894E2419F02900DDDD5B /* Main.storyboard */,
 				402789512419F02A00DDDD5B /* Assets.xcassets */,
 				402789562419F02A00DDDD5B /* Info.plist */,
@@ -214,6 +223,9 @@
 		896FEBD323E1448E9BC803CA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0439B7E724AB1A2C0039CB09 /* Roboto-Bold.ttf */,
+				0439B7E824AB1A2C0039CB09 /* Roboto-Medium.ttf */,
+				0439B7E624AB1A2B0039CB09 /* Roboto-Regular.ttf */,
 				A81ECBF61482458E8DE298A2 /* AntDesign.ttf */,
 				A640B0A512184E97A1B96C31 /* Entypo.ttf */,
 				AD7FC2DA1DB34EEE9E5ADCF5 /* EvilIcons.ttf */,
@@ -253,6 +265,7 @@
 				402789432419F02900DDDD5B /* Resources */,
 				E69241FD71420DBD04E720FE /* [CP] Embed Pods Frameworks */,
 				00D057FF242B54B1002B9F1A /* Bundle React Native code and images */,
+				6855B43449B8FCABCE210805 /* [CP-User] [RNFB] Core Configuration */,
 			);
 			buildRules = (
 			);
@@ -351,13 +364,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0439B7EB24AB1A2C0039CB09 /* Roboto-Medium.ttf in Resources */,
 				402789552419F02A00DDDD5B /* LaunchScreen.storyboard in Resources */,
+				0439B7E924AB1A2C0039CB09 /* Roboto-Regular.ttf in Resources */,
+				0439B7EA24AB1A2C0039CB09 /* Roboto-Bold.ttf in Resources */,
 				402789522419F02A00DDDD5B /* Assets.xcassets in Resources */,
 				402789502419F02900DDDD5B /* Main.storyboard in Resources */,
 				79658B4F6E044D36BCAC9E83 /* iCielVAGRoundedNext-Bold.otf in Resources */,
 				D6C636D8D0E3471D8E8206E6 /* iCielVAGRoundedNext-DemiBold.otf in Resources */,
 				454F314D1D6344D9AB8F77CE /* iCielVAGRoundedNext-Light.otf in Resources */,
 				C52FC60E52AB4F5CA4ED19F1 /* iCielVAGRoundedNext-LightItalic.otf in Resources */,
+				0439B7E424AB18FB0039CB09 /* GoogleService-Info.plist in Resources */,
 				C085FBAC523647499E3C8198 /* iCielVAGRoundedNext-Medium.otf in Resources */,
 				1E70B3406C6B4A469DACD4F5 /* iCielVAGRoundedNext-Regular.otf in Resources */,
 			);
@@ -458,6 +475,16 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6855B43449B8FCABCE210805 /* [CP-User] [RNFB] Core Configuration */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "[CP-User] [RNFB] Core Configuration";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/usr/bin/env bash\n#\n# Copyright (c) 2016-present Invertase Limited & Contributors\n#\n# Licensed under the Apache License, Version 2.0 (the \"License\");\n# you may not use this library except in compliance with the License.\n# You may obtain a copy of the License at\n#\n#   http://www.apache.org/licenses/LICENSE-2.0\n#\n# Unless required by applicable law or agreed to in writing, software\n# distributed under the License is distributed on an \"AS IS\" BASIS,\n# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n# See the License for the specific language governing permissions and\n# limitations under the License.\n#\nset -e\n\n_MAX_LOOKUPS=2;\n_SEARCH_RESULT=''\n_RN_ROOT_EXISTS=''\n_CURRENT_LOOKUPS=1\n_JSON_ROOT=\"'react-native'\"\n_JSON_FILE_NAME='firebase.json'\n_JSON_OUTPUT_BASE64='e30=' # { }\n_CURRENT_SEARCH_DIR=${PROJECT_DIR}\n_PLIST_BUDDY=/usr/libexec/PlistBuddy\n_TARGET_PLIST=\"${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}\"\n_DSYM_PLIST=\"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist\"\n\n# plist arrays\n_PLIST_ENTRY_KEYS=()\n_PLIST_ENTRY_TYPES=()\n_PLIST_ENTRY_VALUES=()\n\nfunction setPlistValue {\n  echo \"info:      setting plist entry '$1' of type '$2' in file '$4'\"\n  ${_PLIST_BUDDY} -c \"Add :$1 $2 '$3'\" $4 || echo \"info:      '$1' already exists\"\n}\n\nfunction getFirebaseJsonKeyValue () {\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$1'); puts output[$_JSON_ROOT]['$2']\"\n  else\n    echo \"\"\n  fi;\n}\n\nfunction jsonBoolToYesNo () {\n  if [[ $1 == \"false\" ]]; then\n    echo \"NO\"\n  elif [[ $1 == \"true\" ]]; then\n    echo \"YES\"\n  else echo \"NO\"\n  fi\n}\n\necho \"info: -> RNFB build script started\"\necho \"info: 1) Locating ${_JSON_FILE_NAME} file:\"\n\nif [[ -z ${_CURRENT_SEARCH_DIR} ]]; then\n  _CURRENT_SEARCH_DIR=$(pwd)\nfi;\n\nwhile true; do\n  _CURRENT_SEARCH_DIR=$(dirname \"$_CURRENT_SEARCH_DIR\")\n  if [[ \"$_CURRENT_SEARCH_DIR\" == \"/\" ]] || [[ ${_CURRENT_LOOKUPS} -gt ${_MAX_LOOKUPS} ]]; then break; fi;\n  echo \"info:      ($_CURRENT_LOOKUPS of $_MAX_LOOKUPS) Searching in '$_CURRENT_SEARCH_DIR' for a ${_JSON_FILE_NAME} file.\"\n  _SEARCH_RESULT=$(find \"$_CURRENT_SEARCH_DIR\" -maxdepth 2 -name ${_JSON_FILE_NAME} -print | head -n 1)\n  if [[ ${_SEARCH_RESULT} ]]; then\n    echo \"info:      ${_JSON_FILE_NAME} found at $_SEARCH_RESULT\"\n    break;\n  fi;\n  _CURRENT_LOOKUPS=$((_CURRENT_LOOKUPS+1))\ndone\n\nif [[ ${_SEARCH_RESULT} ]]; then\n  _JSON_OUTPUT_RAW=$(cat \"${_SEARCH_RESULT}\")\n  _RN_ROOT_EXISTS=$(ruby -e \"require 'rubygems';require 'json'; output=JSON.parse('$_JSON_OUTPUT_RAW'); puts output[$_JSON_ROOT]\" || echo '')\n\n  if [[ ${_RN_ROOT_EXISTS} ]]; then\n    _JSON_OUTPUT_BASE64=$(python -c 'import json,sys,base64;print(base64.b64encode(json.dumps(json.loads(open('\"'${_SEARCH_RESULT}'\"').read())['${_JSON_ROOT}'])))' || echo \"e30=\")\n  fi\n\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n\n  # config.messaging_auto_init_enabled\n  _MESSAGING_AUTO_INIT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"messaging_auto_init_enabled\")\n  if [[ $_MESSAGING_AUTO_INIT ]]; then\n    _PLIST_ENTRY_KEYS+=(\"FirebaseMessagingAutoInitEnabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"$(jsonBoolToYesNo \"$_MESSAGING_AUTO_INIT\")\")\n  fi\n\n  # config.crashlytics_disable_auto_disabler - undocumented for now - mainly for debugging, document if becomes usful\n  _CRASHLYTICS_AUTO_DISABLE_ENABLED=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"crashlytics_disable_auto_disabler\")\n  if [[ $_CRASHLYTICS_AUTO_DISABLE_ENABLED == \"true\" ]]; then\n    echo \"Disabled Crashlytics auto disabler.\" # do nothing\n  else\n    _PLIST_ENTRY_KEYS+=(\"firebase_crashlytics_collection_enabled\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"NO\")\n  fi\n\n  # config.admob_delay_app_measurement_init\n  _ADMOB_DELAY_APP_MEASUREMENT=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"admob_delay_app_measurement_init\")\n  if [[ $_ADMOB_DELAY_APP_MEASUREMENT == \"true\" ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GADDelayAppMeasurementInit\")\n    _PLIST_ENTRY_TYPES+=(\"bool\")\n    _PLIST_ENTRY_VALUES+=(\"YES\")\n  fi\n\n  # config.admob_ios_app_id\n  _ADMOB_IOS_APP_ID=$(getFirebaseJsonKeyValue \"$_JSON_OUTPUT_RAW\" \"admob_ios_app_id\")\n  if [[ $_ADMOB_IOS_APP_ID ]]; then\n    _PLIST_ENTRY_KEYS+=(\"GADApplicationIdentifier\")\n    _PLIST_ENTRY_TYPES+=(\"string\")\n    _PLIST_ENTRY_VALUES+=(\"$_ADMOB_IOS_APP_ID\")\n  fi\nelse\n  _PLIST_ENTRY_KEYS+=(\"firebase_json_raw\")\n  _PLIST_ENTRY_TYPES+=(\"string\")\n  _PLIST_ENTRY_VALUES+=(\"$_JSON_OUTPUT_BASE64\")\n  echo \"warning:   A firebase.json file was not found, whilst this file is optional it is recommended to include it to configure firebase services in React Native Firebase.\"\nfi;\n\necho \"info: 2) Injecting Info.plist entries: \"\n\n# Log out the keys we're adding\nfor i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n  echo \"    ->  $i) ${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\"\ndone\n\nfor plist in \"${_TARGET_PLIST}\" \"${_DSYM_PLIST}\" ; do\n  if [[ -f \"${plist}\" ]]; then\n\n    # paths with spaces break the call to setPlistValue. temporarily modify\n    # the shell internal field separator variable (IFS), which normally \n    # includes spaces, to consist only of line breaks\n    oldifs=$IFS\n    IFS=\"\n\"\n\n    for i in \"${!_PLIST_ENTRY_KEYS[@]}\"; do\n      setPlistValue \"${_PLIST_ENTRY_KEYS[$i]}\" \"${_PLIST_ENTRY_TYPES[$i]}\" \"${_PLIST_ENTRY_VALUES[$i]}\" \"${plist}\"\n    done\n\n    # restore the original internal field separator value\n    IFS=$oldifs\n  else\n    echo \"warning:   A Info.plist build output file was not found (${plist})\"\n  fi\ndone\n\necho \"info: <- RNFB build script finished\"\n\n";
 		};
 		BD1F6847DCB685B92711733A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -687,12 +714,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DemoIntegrateRN",
+				);
 				INFOPLIST_FILE = DemoIntegrateRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.duytq.DemoIntegrateRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.success.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DemoIntegrateRN/DemoIntegrateRN-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -708,12 +739,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DemoIntegrateRN",
+				);
 				INFOPLIST_FILE = DemoIntegrateRN/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.duytq.DemoIntegrateRN;
+				PRODUCT_BUNDLE_IDENTIFIER = com.success.driver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DemoIntegrateRN/DemoIntegrateRN-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

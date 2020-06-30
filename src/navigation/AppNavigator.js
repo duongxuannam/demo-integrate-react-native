@@ -632,12 +632,12 @@ class AppNavigator extends React.Component {
         forceInset={{top: 'always', horizontal: 'never'}}
         style={styles.container}>
         <AppContainer ref={ref => NavigationService.setContainer(ref)} />
-        {isLoading && (
+        {/* {isLoading && (
           <View style={styles.loadingScreen}>
             <View style={[styles.loadingScreen, styles.opacityScreen]} />
             <LoadingIC />
           </View>
-        )}
+        )} */}
 
         {dropDownStatus && dropDownPos && (
           <View style={[styles.overlayScreen]}>
