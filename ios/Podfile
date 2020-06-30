@@ -37,15 +37,44 @@ target 'DemoIntegrateRN' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+
+ #
+  # Required by Google Map, ignore if you use Apple Map
+#  pod 'GoogleMaps', '3.2.0'
+#  pod 'Google-Maps-iOS-Utils', '2.1.0'
+#  pod 'GoogleUtilities', '6.5.0'
+#  pod 'GoogleAppMeasurement', '6.5.0'
+
+ pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
+ pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+#  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+#  pod 'react-native-google-maps', :path => '../node_modules/react-native-maps'
+ 
+
+ pod 'react-native-geolocation', :path => '../node_modules/@react-native-community/geolocation'
+
+ pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+ # Point to the installed version
+
+ pod 'RNImageCropPicker', :path => '../node_modules/react-native-image-crop-picker'
+
+
+
+
   use_native_modules!
 
-  target 'DemoIntegrateRNTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
-  target 'DemoIntegrateRNUITests' do
-    # Pods for testing
-  end
+end
 
+
+  
+target 'DemoIntegrateRNTests' do
+  inherit! :search_paths
+  # Pods for testing
+end
+
+target 'DemoIntegrateRNUITests' do
+  # Pods for testing
 end

@@ -58,7 +58,6 @@ dependencies {
     implementation project(':react-native-document-picker')
     implementation 'com.android.support:multidex:1.0.3'
     implementation project(':react-native-image-crop-picker')
-    implementation project(':react-native-config')
     implementation project(':react-native-maps')
     implementation project(':react-native-vector-icons')
     implementation project(':react-native-image-picker')

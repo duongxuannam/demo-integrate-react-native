@@ -1,9 +1,8 @@
 /* eslint-disable no-async-promise-executor */
 /* eslint-disable no-tabs */
-import { AsyncStorage } from 'react-native';
+import {AsyncStorage} from 'react-native';
 import axios from 'axios';
 import axiosInstance from './axios';
-// import { Sentry } from "./sentry";
 import API_URL from '../constants/apiUrl';
 
 axiosInstance.interceptors.response.use(
@@ -31,31 +30,31 @@ axiosInstance.interceptors.response.use(
       // store.dispatch(navLogout())
       return Promise.reject(error);
     }
-  }
+  },
 );
 
 export class ApiError extends Error {
-    status = null;
+  status = null;
 
-    data = null;
+  data = null;
 
-    constructor(status, message, data) {
-      super(message);
-      this.status = status;
-      this.data = data;
+  constructor(status, message, data) {
+    super(message);
+    this.status = status;
+    this.data = data;
+  }
+
+  getErrorMessage() {
+    if (this.message && this.message) {
+      return this.message;
     }
 
-    getErrorMessage() {
-      if (this.message && this.message) {
-        return this.message;
-      }
-
-      if (this.data && this.data.errors) {
-        return this.data.errors.message || 'Unknown API Error';
-      }
-
-      return 'Unknown API Error';
+    if (this.data && this.data.errors) {
+      return this.data.errors.message || 'Unknown API Error';
     }
+
+    return 'Unknown API Error';
+  }
 }
 
 /**
@@ -78,12 +77,6 @@ export function handlingErrors(error) {
   let status;
   let data;
   try {
-    // Sentry.captureException(error, {
-    //     url: error.response && error.response.config.url || "N/A",
-    //     request: error.response && error.response.config.data || "N/A",
-    //     response: error.response && error.response.data || "N/A"
-    // });
-
     if (error.response) {
       // tslint:disable-next-line:no-console
       console.log('API_ERROR', error.response);
@@ -94,7 +87,7 @@ export function handlingErrors(error) {
 
       if (error.response.status === 413) {
         message = 'File too large';
-        data = { error: 'File too large' };
+        data = {error: 'File too large'};
         status = error.response.status;
         return new ApiError(status, message, data);
       }
@@ -112,9 +105,8 @@ export function handlingErrors(error) {
   return new ApiError(status, message, data);
 }
 
-const verifyHeader = (headers = {}) => (
-  Boolean(typeof headers === 'object' && Object.keys(headers).length)
-);
+const verifyHeader = (headers = {}) =>
+  Boolean(typeof headers === 'object' && Object.keys(headers).length);
 
 /**
  * As middleware for API calling
@@ -125,41 +117,35 @@ const verifyHeader = (headers = {}) => (
  * @param {Object} headers Header of rest API
  * @return {Promise}
  */
-export default (
-  url,
-  method,
-  data,
-  headers,
-) => new Promise(async (resolve, reject) => {
-  try {
-    let defaultHeader = {
-      'Content-type': 'application/json'
-    };
-    /** for action has no token */
-    if (url !== API_URL.LOGIN
-			&& url !== API_URL.REGISTER
-    ) {
-      const token = await AsyncStorage.getItem('TOKEN');
-      if (token) {
-        defaultHeader = {
-          'Content-type': 'application/json',
-          Authorization: `Bearer ${token}`,
-        };
+export default (url, method, data, headers) =>
+  new Promise(async (resolve, reject) => {
+    try {
+      let defaultHeader = {
+        'Content-type': 'application/json',
+      };
+      /** for action has no token */
+      if (url !== API_URL.LOGIN && url !== API_URL.REGISTER) {
+        const token = await AsyncStorage.getItem('TOKEN');
+        if (token) {
+          defaultHeader = {
+            'Content-type': 'application/json',
+            Authorization: `Bearer ${token}`,
+          };
+        }
       }
-    }
 
-    const response = await axiosInstance.request({
-      data,
-      headers: {
-        ...defaultHeader,
-        ...headers
-      },
-      method,
-      url,
-      timeout: 100000,
-    });
-    resolve(response.data);
-  } catch (error) {
-    reject(handlingErrors(error));
-  }
-});
+      const response = await axiosInstance.request({
+        data,
+        headers: {
+          ...defaultHeader,
+          ...headers,
+        },
+        method,
+        url,
+        timeout: 100000,
+      });
+      resolve(response.data);
+    } catch (error) {
+      reject(handlingErrors(error));
+    }
+  });

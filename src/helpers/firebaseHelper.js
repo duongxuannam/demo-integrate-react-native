@@ -1,7 +1,6 @@
 import auth from '@react-native-firebase/auth';
 import app from '@react-native-firebase/app';
 import database from '@react-native-firebase/database';
-// import * as Sentry from '@sentry/react-native';
 import _ from 'lodash';
 import DeviceInfo from 'react-native-device-info';
 
@@ -23,18 +22,18 @@ const FirebaseHelper = () => {
   function loginWithAnonymous(name = null) {
     return authInstance
       .signInAnonymously()
-      .then(user => {
+      .then((user) => {
         if (name) {
           user.user.updateProfile({displayName: name});
         }
         return user;
       })
-      .catch(err => {});
+      .catch((err) => {});
   }
 
   function logout(listActive, deviceId) {
     if (refStatus) {
-      const list = listActive.filter(i => i !== deviceId) || [];
+      const list = listActive.filter((i) => i !== deviceId) || [];
       refStatus.update({
         listActive: [...list],
       });
@@ -51,9 +50,9 @@ const FirebaseHelper = () => {
       databaseInstance
         .ref(groupID)
         .limitToLast(200)
-        .on('value', snapshot => {
+        .on('value', (snapshot) => {
           const val = [];
-          snapshot.forEach(item => val.push({...item.val(), id: item.key}));
+          snapshot.forEach((item) => val.push({...item.val(), id: item.key}));
           roomActiveList = _.union([...roomActiveList], [groupID]);
           if (val) {
             callbacks(val);
@@ -70,12 +69,12 @@ const FirebaseHelper = () => {
       .push({
         ...payload,
       })
-      .then(success => callback(success))
-      .catch(err => failed(err));
+      .then((success) => callback(success))
+      .catch((err) => failed(err));
   };
 
   const markMessageRead = (groupID, itemsUnRead, accountId) => {
-    itemsUnRead.forEach(item => {
+    itemsUnRead.forEach((item) => {
       databaseInstance.ref(`${groupID}/${item.id}`).update({
         isRead: item.isRead.concat(accountId),
       });
@@ -89,7 +88,7 @@ const FirebaseHelper = () => {
   function getListActive(userID = 'all') {
     const roomName = `/infoStatus/${userID}`;
     return new Promise((resolve, reject) => {
-      databaseInstance.ref(roomName).once('value', snapshot => {
+      databaseInstance.ref(roomName).once('value', (snapshot) => {
         const values = snapshot.val();
         resolve(
           (values && values.listActive.length > 0 && values.listActive) || [],
@@ -100,7 +99,7 @@ const FirebaseHelper = () => {
 
   function firebaseGetStatusInfo(userID = 'all', callback) {
     const roomName = `/infoStatus/${userID}`;
-    return databaseInstance.ref(roomName).on('value', snapshot => {
+    return databaseInstance.ref(roomName).on('value', (snapshot) => {
       const values = snapshot.val();
       if (refStatus && currentUser) {
         console.log('Connect or Reconnect');
@@ -119,7 +118,7 @@ const FirebaseHelper = () => {
 
   function firebaseSetOffStatusInfo(userID = 'all', callback) {
     const roomName = `/infoStatus/${userID}`;
-    return databaseInstance.ref(roomName).off('value', snapshot => {
+    return databaseInstance.ref(roomName).off('value', (snapshot) => {
       const values = snapshot.val();
       callback(
         (values && values.listActive.length > 0 && values.listActive) || [],
@@ -137,7 +136,7 @@ const FirebaseHelper = () => {
     const roomName = `/infoStatus/${userID}`;
     const ref = databaseInstance.ref(roomName);
     setRefStatus(ref);
-    const list = listActive.filter(i => i !== deviceId) || [];
+    const list = listActive.filter((i) => i !== deviceId) || [];
     ref.onDisconnect().update({
       listActive: [...list],
     });
@@ -146,8 +145,8 @@ const FirebaseHelper = () => {
       .update({
         listActive: [...listUpdate],
       })
-      .then(success => callback(success))
-      .catch(error => failed(error));
+      .then((success) => callback(success))
+      .catch((error) => failed(error));
   }
 
   function setRefStatus(newRef) {
@@ -157,7 +156,7 @@ const FirebaseHelper = () => {
   }
 
   function clearAllRef() {
-    roomActiveList.forEach(roomName => {
+    roomActiveList.forEach((roomName) => {
       databaseInstance.ref(roomName).off('value');
     });
     roomActiveList = [];
@@ -171,7 +170,9 @@ const FirebaseHelper = () => {
   function firebaseSetOffListRoom(groupID, clearAll) {
     if (roomActiveList.includes(groupID)) {
       databaseInstance.ref(groupID).off('value');
-      const indexRoomName = roomActiveList.findIndex(room => room === groupID);
+      const indexRoomName = roomActiveList.findIndex(
+        (room) => room === groupID,
+      );
       roomActiveList.splice(indexRoomName, 1);
     }
   }

@@ -9,7 +9,6 @@ import {
   SafeAreaView,
   Platform,
 } from 'react-native';
-// import * as Sentry from '@sentry/react-native';
 import DocumentPicker from 'react-native-document-picker';
 import ImagePicker from 'react-native-image-picker';
 import ModalFileOrImage from '../../common/ModalFileOrImage';
@@ -55,7 +54,7 @@ class TapUpload extends React.PureComponent {
 
   ObjectToFormData = (params = {}) => {
     const formData = new FormData();
-    Object.keys(params).forEach(key => {
+    Object.keys(params).forEach((key) => {
       formData.append(key, params[key]);
     });
     return formData;
@@ -152,7 +151,7 @@ class TapUpload extends React.PureComponent {
     const options = {
       noData: true,
     };
-    ImagePicker.launchImageLibrary(options, response => {
+    ImagePicker.launchImageLibrary(options, (response) => {
       this.setState({
         showOption: false,
       });
@@ -217,9 +216,7 @@ class TapUpload extends React.PureComponent {
               actions.uploadProofPaymentMethod(shipmentID, formData, () => {
                 console.log('ahihi');
               });
-            } catch (error) {
-              // Sentry.captureException(`Exception Image line 210: ${error}`);
-            }
+            } catch (error) {}
           } else {
             actions.setAddressDataUpdating(
               {
@@ -331,7 +328,7 @@ class TapUpload extends React.PureComponent {
     }
   };
 
-  getPhoto = photo => photo.uri;
+  getPhoto = (photo) => photo.uri;
 
   renderView = () => {
     const {showDelete, isRemove} = this.state;
